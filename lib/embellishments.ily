@@ -56,9 +56,6 @@ sruffddr = \drummode { \drumgrace { d16[\dr g g] } }	% Swiss Ruff left  with sta
 #(define (autohandFunc left right)
 	(define-music-function (parser location note) (ly:music? )
 	 #{
-		#(newline)
-		#(display "Fix autohand function for arbitrary depth")
-	
 		#(if (string=? (symbol->string (ly:music-property note 'drum-type)) "left-hand")
 			#{ $left #}
 			#{ $right #})

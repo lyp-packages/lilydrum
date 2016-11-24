@@ -17,7 +17,7 @@
   }
 }
 
-\include "lilydrum.ly"
+\require "lilydrum"
 
 \score {
 	\new PipeBandDrumStaff {
@@ -45,7 +45,7 @@
 
 \score {
 	\new PipeBandDrumStaff {
-	 	\tempo 2/4
+	 	\time 2/4
 		\drummode {
 			d^\splitTheFeather g^\cartWheel
 			d^\up r4 
@@ -66,11 +66,14 @@
 		subtitle = ""
 	}
 }
+
 \score {
 	\new PipeBandDrumStaff {
 		\drummode {
-			d^\lthrow g^\rthrow 
-			d^\bthrow r |
+		 	d g
+			 %d^\lthrow g^\rthrow 
+			d r |
+			%d^\bthrow r |
 
 			d^\lpush g^\rpush
 			d^\bpush r |
@@ -81,18 +84,19 @@
 			d^\blfy d^\rblfy
 			r r |
 		}
-    }
-    \addlyrics {
+  }
+  \addlyrics {
 		"\lthrow" "\rthrow" "\bthrow"  
 		"\lpush" "\rpush" "\bpush"   
 		"\andrewStop" "\quiggs" "\stop"   
 		"\blfy" "\rblfy"
-    }
+  }
 	\header {
 	  	title = \markup \column {\line{Flourishing II}}
 		subtitle = ""
 	}
 }
+
 \score {
 	\new PipeBandDrumStaff {
 		\time 2/4

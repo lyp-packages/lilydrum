@@ -1,8 +1,6 @@
 % ===================================================	%
 % 	Layout tweaks for good defaults						%
 % ===================================================	%
-#(newline)
-#(display "Layout tweaks loaded")
 % Note name defs :
 %	"d" for the right hand ("droite") and
 %	"g" for the left hand ("gauche")

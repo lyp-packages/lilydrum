@@ -1,8 +1,7 @@
 % =================================================	%
 % 	Rehearsal Marks									%
 % =================================================	%
-#(newline)
-#(display "Midi Support loaded")
+
 % From Svenax's bagpipemusic
 markText = #(define-music-function (parser location text) (string?) #{
     \once \override Score.RehearsalMark #'self-alignment-X = #LEFT

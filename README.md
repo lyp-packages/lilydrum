@@ -1,4 +1,7 @@
-# pipeband-drumming
+# lilydrum: Right-left drum notation (mainly for pipeband snare drumming)
+
+_This repository is a fork of [lilydrum](github.com/kastdeur/lilydrum)_.
+
 First trial with github, purpose is to set up a lilypond file in the same way as there is a bagpipe.ly (see github.com/svenax/bagpipemusic). Main focus is on pipeband snare drumming. 
 
 Somehow, the drums part in lilypond does not cover a notation with only right left. That is right is above the line and left is below it. In the same manner as the bagpipe.ly file, flams and drags are defined as a shortcut.
@@ -6,11 +9,41 @@ Somehow, the drums part in lilypond does not cover a notation with only right le
 There has been a lilypond include file earlier made by Simon Froger (which includes all of the above). So first version is a shameless copy.
 This is meant to extend or translate some parts.
 
-The original file can still be found at http://lsr.di.unimi.it/LSR/Snippet?id=970
+The original file can still be found at http://lsr.di.unimi.it/LSR/Snippet?id=970.
 
 As the repo has been torn apart to separate these files from an actual music repo, you can find most of my music on [github](github.com/kastdeur/pipeband-music), there's even a ['master repo'](github.com/kastdeur/pipeband-drumming) which should set up most of the environment needed to compile this music (also pulling in [svenax's bagpipemusic](github.com/svenax/bagpipemusic)).
 
+## Installation
+
+Install using [lyp](https://github.com/noteflakes/lyp)
+
+```bash
+lyp install lilydrum
+```
+
+## Usage
+
+```lilypond
+\require "lilydrum"
+
+\score {
+	\new PipeBandDrumStaff {
+		\time 2/4
+		\drummode {
+		  d4 g 
+		  <<d g>> r
+		  \crossstick d \crossstick g 
+		  \rimshot d \rimshot g 
+		  \backstick d \backstick g
+		}
+  }
+}
+```
+
+For more examples see the [cheatsheet](cheatsheet.ly).
+
 ##TODO
+
  * ~~See if aliases work~~ `foo = { \bar }`
  * show 8th and 16th beats in autobeaming, currently only 8ths:  d32[[ g] d[ g]] d32[[ g] d[ g]]
  * Macro for tutti's (unisons)

@@ -1,8 +1,6 @@
 % ===================================================	%
 % 	*Shorts* for Naming									%
 % ===================================================	%
-#(newline)
-#(display "Short naming loaded")
 
 instrumentSide = "Side"
 instrumentTenor = "Tenor"
